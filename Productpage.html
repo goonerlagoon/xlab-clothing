@@ -1,1 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail - Stylish Shirt</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        header {
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .slider {
+            position: relative;
+            text-align: center;
+        }
+        .main-image {
+            width: 100%;
+            height: auto;
+        }
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.7);
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .arrow-left {
+            left: 10px;
+        }
+        .arrow-right {
+            right: 10px;
+        }
+        .product-info {
+            margin-top: 20px;
+        }
+        .rating {
+            color: gold;
+            font-size: 20px;
+        }
+        .colors, .sizes {
+            margin: 10px 0;
+        }
+        .color-option {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border: 2px solid #ddd;
+            border-radius: 50%;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .delivery {
+            margin: 20px 0;
+        }
+        .buttons {
+            margin: 20px 0;
+        }
+        .buttons button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        .buttons button:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #343a40;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> Shirt</h1>
+    </header>
+    <div class="container">
+        <div class="slider">
+            <button class="arrow arrow-left" onclick="changeImage(-1)">&#10094;</button>
+            <img id="mainImage" class="main-image" src="path/to/your-image1.jpg" alt=" Shirt">
+            <button class="arrow arrow-right" onclick="changeImage(1)">&#10095;</button>
+        </div>
+        <div class="thumbnails">
+            <img onclick="setMainImage('path/to/your-image1.jpg')" src="path/to/your-image1.jpg" alt="Thumbnail 1" style="width: 60px; cursor: pointer; margin: 5px;">
+            <img onclick="setMainImage('path/to/your-image2.jpg')" src="path/to/your-image2.jpg" alt="Thumbnail 2" style="width: 60px; cursor: pointer; margin: 5px;">
+            <img onclick="setMainImage('path/to/your-image3.jpg')" src="path/to/your-image3.jpg" alt="Thumbnail 3" style="width: 60px; cursor: pointer; margin: 5px;">
+        </div>
+        <div class="product-info">
+            <h2> Shirt</h2>
+            <!-- information not real -->
+            <div class="rating">
+                ★★★★☆ (4.5/5)
+            </div>
+            <div class="colors">
+                <strong>Available Colors:</strong>
+                <div>
+                    <div class="color-option" style="background-color: red;" title="Red"></div>
+                    <div class="color-option" style="background-color: blue;" title="Blue"></div>
+                    <div class="color-option" style="background-color: green;" title="Green"></div>
+                </div>
+            </div>
+            <div class="sizes">
+                <strong>Available Sizes:</strong>
+                <ul>
+                    <li>S - Small</li>
+                    <li>M - Medium</li>
+                    <li>L - Large</li>
+                </ul>
+            </div>
+            <div class="delivery">
+                <strong>Approximate Delivery:</strong> 
+                <input type="text" placeholder="Enter ZIP code">
+                <button>Check Delivery</button>
+            </div>
+            <div class="reviews">
+                <h3>Customer Reviews:</h3>
+                <p>★★★★★ "Great quality and fits perfectly!" - Jane Doe</p> <!-- change the name if you want to -->
+                <p>★★★★☆ "Color was a bit different than expected." - John Smith</p>
+            </div>
+            <div class="product-details">
+                <h3>About This Item:</h3>
+                <p>Comfortable and stylish shirt made from 100% organic cotton.</p>
+            </div>
+            <div class="technical-details">
+                <h3>Product Information:</h3>
+                <ul>
+                    <li>Color: Red</li>
+                    <li>Brand: My Clothing Brand</li>
+                    <li>Age Range: Adult</li>
+                    <li>Material: 100% Organic Cotton</li>
+                </ul>
+            </div>
+            <div class="compare">
+                <h3>Compare With Similar Items:</h3>
+                <ul>
+                    <li>Pants</li>
+                    <li>Jacket</li>
+                </ul>
+            </div>
+            <div class="buttons">
+                <button id="addToCart">Add to Cart</button>
+                <button id="checkout">Checkout</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 My Clothing Brand. All rights reserved.</p> <!-- Optional please let me know if this is required -->
+    </footer>
 
+    <script>
+        let currentImageIndex = 0;
+        const images = [
+            'path/to/your-image1.jpg',
+            'path/to/your-image2.jpg',
+            'path/to/your-image3.jpg'
+        ];
+
+        function changeImage(direction) {
+            currentImageIndex += direction;
+            if (currentImageIndex < 0) currentImageIndex = images.length - 1;
+            if (currentImageIndex >= images.length) currentImageIndex = 0;
+            document.getElementById('mainImage').src = images[currentImageIndex];
+        }
+
+        function setMainImage(imageSrc) {
+            currentImageIndex = images.indexOf(imageSrc);
+            document.getElementById('mainImage').src = imageSrc;
+        }
+
+        document.getElementById('addToCart').addEventListener('click', function() {
+            alert('Item added to cart!');
+        });
+
+        document.getElementById('checkout').addEventListener('click', function() {
+            alert('Proceeding to checkout...');
+        });
+    </script>
+</body>
+</html>
