@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Detail - Shirt</title>
+    <title>Product Detail - Stylish Shirt</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -116,18 +116,17 @@
     <div class="container">
         <div class="slider">
             <button class="arrow arrow-left" onclick="changeImage(-1)">&#10094;</button>
-            <img id="mainImage" class="main-image" src="dress.jpg" alt="Shirt">
+            <img id="mainImage" class="main-image" src="assets/dress.jpg" alt="Shirt">
             <button class="arrow arrow-right" onclick="changeImage(1)">&#10095;</button>
         </div>
         <div class="thumbnails">
-<!-- images in assets folder -->
-            <img onclick="setMainImage('dress.jpg')" src="dress.jpg" alt="Thumbnail 1" style="width: 60px; cursor: pointer; margin: 5px;">
-            <img onclick="setMainImage('featured-product.jpg')" src="featured-product.jpg" alt="Thumbnail 2" style="width: 60px; cursor: pointer; margin: 5px;">
-            <img onclick="setMainImage('jacket.jpg')" src="jacket.jpg" alt="Thumbnail 3" style="width: 60px; cursor: pointer; margin: 5px;">
-            <img onclick="setMainImage('jeans.jpg')" src="jeans.jpg" alt="Thumbnail 4" style="width: 60px; cursor: pointer; margin: 5px;">
-            <img onclick="setMainImage('shoes.jpg')" src="shoes.jpg" alt="Thumbnail 5" style="width: 60px; cursor: pointer; margin: 5px;">
-            <img onclick="setMainImage('sweater.jpg')" src="sweater.jpg" alt="Thumbnail 6" style="width: 60px; cursor: pointer; margin: 5px;">
-            <img onclick="setMainImage('tshirt.jpg')" src="tshirt.jpg" alt="Thumbnail 7" style="width: 60px; cursor: pointer; margin: 5px;">
+            <img onclick="setMainImage('assets/dress.jpg')" src="assets/dress.jpg" alt="Thumbnail 1" style="width: 60px; cursor: pointer; margin: 5px;">
+            <img onclick="setMainImage('assets/featured-product.jpg')" src="assets/featured-product.jpg" alt="Thumbnail 2" style="width: 60px; cursor: pointer; margin: 5px;">
+            <img onclick="setMainImage('assets/jacket.jpg')" src="assets/jacket.jpg" alt="Thumbnail 3" style="width: 60px; cursor: pointer; margin: 5px;">
+            <img onclick="setMainImage('assets/jeans.jpg')" src="assets/jeans.jpg" alt="Thumbnail 4" style="width: 60px; cursor: pointer; margin: 5px;">
+            <img onclick="setMainImage('assets/shoes.jpg')" src="assets/shoes.jpg" alt="Thumbnail 5" style="width: 60px; cursor: pointer; margin: 5px;">
+            <img onclick="setMainImage('assets/sweater.jpg')" src="assets/sweater.jpg" alt="Thumbnail 6" style="width: 60px; cursor: pointer; margin: 5px;">
+            <img onclick="setMainImage('assets/tshirt.jpg')" src="assets/tshirt.jpg" alt="Thumbnail 7" style="width: 60px; cursor: pointer; margin: 5px;">
         </div>
         <div class="product-info">
             <h2>Shirt</h2>
@@ -191,16 +190,15 @@
     </footer>
 
     <script>
-<!-- images in assets folder -->
         let currentImageIndex = 0;
         const images = [
-            'dress.jpg',
-            'featured-product.jpg',
-            'jacket.jpg',
-            'jeans.jpg',
-            'shoes.jpg',
-            'sweater.jpg',
-            'tshirt.jpg'
+            'assets/dress.jpg',
+            'assets/featured-product.jpg',
+            'assets/jacket.jpg',
+            'assets/jeans.jpg',
+            'assets/shoes.jpg',
+            'assets/sweater.jpg',
+            'assets/tshirt.jpg'
         ];
 
         function changeImage(direction) {
