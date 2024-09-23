@@ -1,10 +1,11 @@
 <!-- Group Member: Erick. Please let me know if there any questions -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Detail - Stylish Shirt</title>
+    <title>Product Detail - Shirt</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -84,7 +85,17 @@
             font-size: 16px;
             margin-right: 10px;
         }
-        .buttons button:hover {
+        .buttons a {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        .buttons a:hover {
             background-color: #0056b3;
         }
         footer {
@@ -100,22 +111,26 @@
 </head>
 <body>
     <header>
-        <h1> Shirt</h1>
+        <h1>Shirt</h1>
     </header>
     <div class="container">
         <div class="slider">
             <button class="arrow arrow-left" onclick="changeImage(-1)">&#10094;</button>
-            <img id="mainImage" class="main-image" src="path/to/your-image1.jpg" alt=" Shirt">
+            <img id="mainImage" class="main-image" src="dress.jpg" alt="Shirt">
             <button class="arrow arrow-right" onclick="changeImage(1)">&#10095;</button>
         </div>
         <div class="thumbnails">
-            <img onclick="setMainImage('path/to/your-image1.jpg')" src="path/to/your-image1.jpg" alt="Thumbnail 1" style="width: 60px; cursor: pointer; margin: 5px;">
-            <img onclick="setMainImage('path/to/your-image2.jpg')" src="path/to/your-image2.jpg" alt="Thumbnail 2" style="width: 60px; cursor: pointer; margin: 5px;">
-            <img onclick="setMainImage('path/to/your-image3.jpg')" src="path/to/your-image3.jpg" alt="Thumbnail 3" style="width: 60px; cursor: pointer; margin: 5px;">
+<!-- images in assets folder -->
+            <img onclick="setMainImage('dress.jpg')" src="dress.jpg" alt="Thumbnail 1" style="width: 60px; cursor: pointer; margin: 5px;">
+            <img onclick="setMainImage('featured-product.jpg')" src="featured-product.jpg" alt="Thumbnail 2" style="width: 60px; cursor: pointer; margin: 5px;">
+            <img onclick="setMainImage('jacket.jpg')" src="jacket.jpg" alt="Thumbnail 3" style="width: 60px; cursor: pointer; margin: 5px;">
+            <img onclick="setMainImage('jeans.jpg')" src="jeans.jpg" alt="Thumbnail 4" style="width: 60px; cursor: pointer; margin: 5px;">
+            <img onclick="setMainImage('shoes.jpg')" src="shoes.jpg" alt="Thumbnail 5" style="width: 60px; cursor: pointer; margin: 5px;">
+            <img onclick="setMainImage('sweater.jpg')" src="sweater.jpg" alt="Thumbnail 6" style="width: 60px; cursor: pointer; margin: 5px;">
+            <img onclick="setMainImage('tshirt.jpg')" src="tshirt.jpg" alt="Thumbnail 7" style="width: 60px; cursor: pointer; margin: 5px;">
         </div>
         <div class="product-info">
-            <h2> Shirt</h2>
-            <!-- information not real -->
+            <h2>Shirt</h2>
             <div class="rating">
                 ★★★★☆ (4.5/5)
             </div>
@@ -142,7 +157,7 @@
             </div>
             <div class="reviews">
                 <h3>Customer Reviews:</h3>
-                <p>★★★★★ "Great quality and fits perfectly!" - Jane Doe</p> <!-- change the name if you want to -->
+                <p>★★★★★ "Great quality and fits perfectly!" - Jane Doe</p>
                 <p>★★★★☆ "Color was a bit different than expected." - John Smith</p>
             </div>
             <div class="product-details">
@@ -167,20 +182,25 @@
             </div>
             <div class="buttons">
                 <button id="addToCart">Add to Cart</button>
-                <button id="checkout">Checkout</button>
+                <a href="Sales.html" class="checkout-button">Checkout</a>
             </div>
         </div>
     </div>
     <footer>
-        <p>&copy; 2024 My Clothing Brand. All rights reserved.</p> <!-- Optional please let me know if this is required -->
+        <p>&copy; 2024 My Clothing Brand. All rights reserved.</p>
     </footer>
 
     <script>
+<!-- images in assets folder -->
         let currentImageIndex = 0;
         const images = [
-            'path/to/your-image1.jpg',
-            'path/to/your-image2.jpg',
-            'path/to/your-image3.jpg'
+            'dress.jpg',
+            'featured-product.jpg',
+            'jacket.jpg',
+            'jeans.jpg',
+            'shoes.jpg',
+            'sweater.jpg',
+            'tshirt.jpg'
         ];
 
         function changeImage(direction) {
@@ -197,10 +217,6 @@
 
         document.getElementById('addToCart').addEventListener('click', function() {
             alert('Item added to cart!');
-        });
-
-        document.getElementById('checkout').addEventListener('click', function() {
-            alert('Proceeding to checkout...');
         });
     </script>
 </body>
