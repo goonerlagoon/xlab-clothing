@@ -1,35 +1,150 @@
-<!-- Group Member: Erick. Please let me know if there any questions --><!DOCTYPE html>
+<!-- Group Member: Erick. Please let me know if there any questions -->
+<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Featured Items</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Featured Products - My Clothing Brand</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        header {
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #495057;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .product-card {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 15px;
+            padding: 15px;
+            text-align: center;
+            width: 200px;
+        }
+        .product-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .product-card h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .product-card p {
+            color: #28a745;
+            font-weight: bold;
+        }
+        .buttons {
+            margin-top: 10px;
+        }
+        .buttons button {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+        .buttons button:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #343a40;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Featured Products</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="FeaturedPage.html">Featured</a></li>
-                <li><a href="Sales.html">Sales</a></li>
-                <li><a href="ContactUs.html">Contact Us</a></li>
-                <li><a href="CheckoutPage.html">Checkout</a></li>
-            </ul>
-        </nav>
+        <h1>Featured Products</h1><!-- This is an example plase let me know if there any specific product i should add -->
     </header>
-
-    <section>
-        <h2>Featured Item of the Day:</h2>
-        <div class="grid-item">
-            <img src="assets/featured-product.jpg" alt="Featured Product">
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="FeaturedPage.html">Featured</a></li>
+            <li><a href="Sales.html">Sales</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+            <li><a href="CheckoutPage.html">Checkout</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="product-card">
+            <img src="path/to/your-image1.jpg" alt=" ">
+            <h3> Shirt</h3>
+            <p>$29.99</p>
+            <div class="buttons">
+                <button>Add to Cart</button>
+                <button onclick="window.location.href='ProductPage.html'">View Details</button>
+            </div>
         </div>
-        <button>View Product</button>
-    </section>
-
+        <div class="product-card">
+            <img src="path/to/your-image2.jpg" alt=" ">
+            <h3> Pants</h3>
+            <p>$49.99</p>
+            <div class="buttons">
+                <button>Add to Cart</button>
+                <button onclick="window.location.href='ProductPage.html'">View Details</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="path/to/your-image3.jpg" alt=" ">
+            <h3> Jacket</h3>
+            <p>$89.99</p>
+            <div class="buttons">
+                <button>Add to Cart</button>
+                <button onclick="window.location.href='ProductPage.html'">View Details</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="path/to/your-image4.jpg" alt=" ">
+            <h3> Shoes</h3>
+            <p>$59.99</p>
+            <div class="buttons">
+                <button>Add to Cart</button>
+                <button onclick="window.location.href='ProductPage.html'">View Details</button>
+            </div>
+        </div>
+    </div>
     <footer>
-        <p>&copy; 2024 Clothing Store. All rights reserved.</p>
+        <p>&copy; 2024 My Clothing Brand. All rights reserved.</p>
     </footer>
 </body>
 </html>
+
